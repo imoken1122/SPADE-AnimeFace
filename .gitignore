@@ -1,0 +1,6 @@
+run_test/
+.DS_Store
+paint/
+*png
+__pycache__/
+data/
