@@ -61,10 +61,7 @@ img = cv2.cvtColor(img, cv2.COLOR_HSV2BGR)
 
 こちらの処理を画像に適用した結果(これをラフとします) を以下に示します.   そして, この前処理を施した画像を SPADE へ入力とします. 
 
-
-<figure class="figure-image figure-image-fotolife" title="図2: mean-shift法とGaussian filter による前処理した画像">[f:id:kenzo1122:20210620194130p:plain]<figcaption>図2: mean-shift法とGaussian filter による前処理した画像</figcaption></figure>
-
-
+![](images/20210620194130.png)
 
 
 
