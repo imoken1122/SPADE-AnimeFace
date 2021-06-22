@@ -131,11 +131,11 @@ class RandomRotation:
         return tvf.rotate(x, self.angles)
 
 class Dataset(data.Dataset):
-    def __init__(self, dir_path, dir_refpath ,opt=None):
+    def __init__(self, dir_path,opt=None):
         super().__init__()
 
-        self.img_path = sorted(glob.glob(f"{dir_path}/*"))
-        self.ref_img_path = sorted(glob.glob(f"{dir_refpath}/*"))
+        self.img_path = sorted(glob.glob(f"{dir_path}/full/*"))
+        self.ref_img_path = sorted(glob.glob(f"{dir_path}/ref/*"))
 
         self.len = len(self.img_path)
         self.opt = opt
@@ -175,10 +175,10 @@ class Dataset(data.Dataset):
 
 def create_train_test_dataloader(opt):
 
-    train_dataloader = DataLoader(Dataset(f"{opt.input_path}/train",f"{opt.input_refpath}/train",opt),
+    train_dataloader = DataLoader(Dataset(f"{opt.input_path}/train",opt),
                                              batch_size=opt.batch_size, 
                                                 shuffle=True,drop_last=True,num_workers=2)
-    test_dataloader = DataLoader(Dataset(f"{opt.input_path}/test",f"{opt.input_refpath}/test",opt), batch_size=opt.batch_size, shuffle=True,drop_last=True,num_workers=2)
+    test_dataloader = DataLoader(Dataset(f"{opt.input_path}/test",opt), batch_size=opt.batch_size, shuffle=True,drop_last=True,num_workers=2)
     return train_dataloader,test_dataloader
 def create_dataloader(opt):
     dataloader = DataLoader(Dataset(f"{opt.input_path}",opt), batch_size=opt.batch_size, shuffle=True,drop_last=True,num_workers=2)
