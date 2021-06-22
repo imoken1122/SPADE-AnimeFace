@@ -2,7 +2,7 @@
 
 # はじめに
 
-まずはじめに, 2019年の論文である [Semantic Image Synthesis with Spatially-Adaptive Normalization](https://arxiv.org/abs/1903.07291) では, BatchNormの正規化によって今まで流れてきた情報を落としてしまう問題を指摘し, 情報を落とさないように伝播させるために BatchNorm の線形変換にセグメンテーション画像を用いる正規化手法を提案しました. (これを以後SPADEと呼びます)
+まずはじめに, 2019年の論文である [Semantic Image Synthesis with Spatially-Adaptive Normalization](https://arxiv.org/abs/1903.07291) では, BatchNormの正規化によって今まで流れてきた情報を落としてしまう問題を指摘し, 情報を落とさないように伝播させるために BatchNorm の線形変換にセグメンテーション画像を用いる正規化手法を提案しました. (以後, このモジュールをSPADEと呼びます) (AdaIn や StyleGAN でもスタイル情報を用いた正規化手法が使われている)
 
 ![](images/20210620170300.png)
 
