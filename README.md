@@ -77,7 +77,7 @@ __実験環境__
 - epoch 37  
 - データセット [another-anime-face-dataset](https://www.kaggle.com/scribbless/another-anime-face-dataset) から2万枚サンプル (サイズは 256×256 ) 
 
-# 実験結果
+# 実験結果 (Result)
 
 
 最初に, train, test データからランダムサンプルしたデータを用いて生成した結果.  
